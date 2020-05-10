@@ -7,9 +7,11 @@ var s = function( sketch ){
   let balls = [];
 
   let cat = [];
+  sketch.preload = function(){
+    cat.push(sketch.loadSound('js/sound/cat.mp3'));
+  }
   sketch.setup = function() {
     w = sketch.windowWidth;
-    cat.push(sketch.loadSound('js/sound/cat.mp3'))
     sketch.createCanvas(w, h);
     for(var i = 0; i < NumBalls; i++){
       ball = new Ball(sketch, w, h);
