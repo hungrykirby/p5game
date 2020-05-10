@@ -1,0 +1,20 @@
+#p5sketch{
+  width: 100%;
+  height: 100%;
+}
+
+#p5sketch{
+  position: fixed;
+}
+#p5sketch canvas{
+  /*position:fixed;*/
+  top:0;
+  left:0;
+  z-index: 3;
+  width: 100% !important;
+  height: 100% !important;
+}
+footer{
+  height: 6px;
+  display: none;
+}
