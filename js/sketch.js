@@ -1,7 +1,7 @@
 var s = function( sketch ){
   let w = 0;
   let h = sketch.windowHeight;
-  const NumBalls = 2;
+  const NumBalls = 6;
 
   let now_playing_index = 0;
   let balls = [];
@@ -50,6 +50,7 @@ class Ball{
   constructor(sketch, w, h){
     this.sketch = sketch;
     this.w = w; this.h = h;
+    this.sketch.colorMode(this.sketch.HSB, 360, 100, 100, 100);
     this.c = this.sketch.color(this.sketch.random(360), 100, 100, this.sketch.random(100));
     this.firstPos = {x: this.sketch.random(w), y: this.sketch.random(h)};
   }
@@ -57,7 +58,7 @@ class Ball{
     this.d = d;
   }
   drawCircle(){
-    this.sketch.fill('green');
+    this.sketch.fill(this.c);
     this.sketch.noStroke();
     this.sketch.ellipse(this.firstPos.x, this.firstPos.y, this.d, this.d);
   };
